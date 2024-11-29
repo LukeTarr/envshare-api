@@ -17,6 +17,6 @@ class RedisStore : KoinComponent {
 
 
     fun redisPong() {
-         print("PING " + this.redisPool.ping())
+         println("PING " + this.redisPool.ping())
     }
 }

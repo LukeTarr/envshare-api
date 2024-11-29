@@ -7,11 +7,11 @@ import io.ktor.server.routing.*
 import org.koin.ktor.ext.inject
 
 fun Application.configureRouting() {
-    val helloService: RedisStore by inject()
+    val redisStore: RedisStore by inject()
 
     routing {
         get("/") {
-            helloService.redisPong()
+            redisStore.redisPong()
             call.respondText("Hello World!")
         }
     }
